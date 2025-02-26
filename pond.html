@@ -36,7 +36,7 @@
 <script>
   async function fetchDucks() {
     try {
-      const response = await fetch('http://localhost:8080/ducks');
+      const response = await fetch('https://ducks-service-hw3-latest.onrender.com/ducks');
       const ducks = await response.json();
 
       const container = document.getElementById('duck-container');
@@ -47,7 +47,7 @@
         card.classList.add('card');
 
         card.innerHTML = `
-          <img src="http://localhost:8080/ducks/${duck.id}/image" alt="${duck.type}">
+          <img src="https://ducks-service-hw3-latest.onrender.com/ducks/${duck.id}/image" alt="${duck.type}">
           <div class="container">
             <h4><b>${duck.id}</b></h4>
             <p>${duck.type}</p>
